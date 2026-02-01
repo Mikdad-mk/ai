@@ -267,7 +267,8 @@ export async function updateUserProfile(uid: string, updates: Partial<UserProfil
 export async function signInWithGoogle() {
   const supabase = createClient()
 
-  const redirectTo = `${window.location.origin}/auth/callback`
+  const origin = (process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || window.location.origin).replace(/\/$/, "")
+  const redirectTo = `${origin}/auth/callback`
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "google",
