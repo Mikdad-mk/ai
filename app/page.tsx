@@ -309,7 +309,7 @@ export default function LandingPage() {
                     </span>
                   </summary>
                   <div className="text-slate-600 px-6 pb-6 text-sm leading-relaxed">
-                    AI Ustad was conceived and developed by the <strong>Students of Islamic Da'wa Academy, Akode</strong>. It is a project born out of the need for a reliable, digitally accessible source of authentic Islamic knowledge that is free from deviant interpretations.
+                    AI Ustad was conceived and developed by the <strong>Students of Islamic Da'wa Academy, Akode</strong>, mainly led by <strong>Hafiz Midlaj</strong>; a Degree student at Islamic Da'wa Academy pursuing BCA while maintaining Hifz Doura and Islamic Studies. The institution is a prime example for the higher studies of Huffaz (those who have completed Hifz).
                   </div>
                 </details>
               </div>
@@ -396,7 +396,7 @@ export default function LandingPage() {
                       "name": "Who developed AI Ustad?",
                       "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "AI Ustad was developed by the Students of Islamic Da'wa Academy, Akode, to provide reliable Islamic knowledge free from deviant interpretations."
+                        "text": "AI Ustad was developed by the Students of Islamic Da'wa Academy, Akode, mainly led by Hafiz Midlaj. The institution is known for the higher studies of Huffaz, combining religious and secular education."
                       }
                     },
                     {
