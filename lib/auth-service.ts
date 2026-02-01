@@ -35,7 +35,13 @@ export async function signUpUser(email: string, password: string, name: string) 
     email,
     password,
     options: {
-      emailRedirectTo: process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || `${window.location.origin}/`,
+      emailRedirectTo: (() => {
+        let origin = window.location.origin
+        if (window.location.hostname === "localhost" && process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL) {
+          origin = process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL
+        }
+        return `${origin.replace(/\/$/, "")}/`
+      })(),
       data: {
         full_name: name,
         initials,
@@ -267,7 +273,13 @@ export async function updateUserProfile(uid: string, updates: Partial<UserProfil
 export async function signInWithGoogle() {
   const supabase = createClient()
 
-  const origin = (process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL || window.location.origin).replace(/\/$/, "")
+  let origin = window.location.origin
+  // Only use the environment override if we are on localhost (dev mode)
+  // This prevents production deployments from accidentally redirecting to localhost if the env var is set
+  if (window.location.hostname === "localhost" && process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL) {
+    origin = process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL
+  }
+  origin = origin.replace(/\/$/, "")
   const redirectTo = `${origin}/auth/callback`
 
   const { data, error } = await supabase.auth.signInWithOAuth({
