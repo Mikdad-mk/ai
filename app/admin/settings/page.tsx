@@ -97,14 +97,12 @@ export default function SystemSettingsPage() {
               </div>
               <button
                 onClick={() => setSettings({ ...settings, enableSignup: !settings.enableSignup })}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.enableSignup ? "bg-purple-600" : "bg-gray-200"
-                }`}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.enableSignup ? "bg-purple-600" : "bg-gray-200"
+                  }`}
               >
                 <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.enableSignup ? "translate-x-6" : "translate-x-1"
-                  }`}
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.enableSignup ? "translate-x-6" : "translate-x-1"
+                    }`}
                 />
               </button>
             </div>
@@ -118,14 +116,12 @@ export default function SystemSettingsPage() {
                 onClick={() =>
                   setSettings({ ...settings, requireEmailVerification: !settings.requireEmailVerification })
                 }
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.requireEmailVerification ? "bg-purple-600" : "bg-gray-200"
-                }`}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${settings.requireEmailVerification ? "bg-purple-600" : "bg-gray-200"
+                  }`}
               >
                 <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.requireEmailVerification ? "translate-x-6" : "translate-x-1"
-                  }`}
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.requireEmailVerification ? "translate-x-6" : "translate-x-1"
+                    }`}
                 />
               </button>
             </div>
@@ -139,6 +135,22 @@ export default function SystemSettingsPage() {
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
               <p className="text-xs text-gray-500 mt-1">Maximum number of messages to include in AI context</p>
+            </div>
+
+            <div className="pt-4 border-t border-gray-100">
+              <h3 className="text-lg font-medium text-gray-900 mb-3">Integrations</h3>
+              <Link href="/admin/settings/gemini" className="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-purple-300 transition-colors group">
+                <div className="flex items-center space-x-3">
+                  <div className="p-2 bg-white rounded-md shadow-sm">
+                    <Settings className="w-5 h-5 text-purple-600" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-900">Gemini API Configuration</p>
+                    <p className="text-sm text-gray-500">Manage API keys and quotas</p>
+                  </div>
+                </div>
+                <div className="text-purple-600 font-medium text-sm group-hover:underline">Configure &rarr;</div>
+              </Link>
             </div>
 
             <button

@@ -6,6 +6,7 @@ import { createClient } from "@supabase/supabase-js"
 import { createServerClient } from "@supabase/ssr"
 import { cookies } from "next/headers"
 import { chatModel } from "@/lib/gemini-server"
+import { GeminiKeyService } from "@/lib/gemini-key-service"
 
 async function getServerChatMessages(supabaseAdmin: ReturnType<typeof createClient>, chatId: string) {
   try {
@@ -182,21 +183,15 @@ export async function POST(request: NextRequest) {
       },
     }
 
-    const availableKeys = [
-      process.env.GEMINI_API_KEY,
-      process.env.GEMINI_API_KEY_2,
-      process.env.GEMINI_API_KEY_3,
-      process.env.GEMINI_API_KEY_4,
-      process.env.GEMINI_API_KEY_5,
-      "AIzaSyAMzJeZTkDIapDQxZnS8nSRBtxySXmf2vE",
-    ].filter((key): key is string => !!key)
+    // -- Fetch Keys via Service --
+    const availableKeys = await GeminiKeyService.getAvailableKeys()
 
     if (availableKeys.length === 0) {
       console.error("[v0] No GEMINI_API_KEY configured")
       return new Response(
         JSON.stringify({
           error: "service_unavailable",
-          message: "AI service is not configured. Please add GEMINI_API_KEY to environment variables.",
+          message: "AI service is not configured. Please add GEMINI_API_KEY to settings.",
         }),
         {
           status: 503,
@@ -231,12 +226,14 @@ export async function POST(request: NextRequest) {
 
         if (response.status === 429) {
           console.log(`[v0] Key ${keyIndex + 1} rate limited, trying next key...`)
+          await GeminiKeyService.reportError(apiKey) // Report failure
           const errorData = await response.json()
           lastError = errorData
           continue
         }
 
         if (response.status === 503) {
+          await GeminiKeyService.reportError(apiKey) // Report failure
           const errorData = await response.json()
           lastError = errorData
           return new Response(
@@ -253,6 +250,7 @@ export async function POST(request: NextRequest) {
         }
 
         if (!response.ok) {
+          await GeminiKeyService.reportError(apiKey) // Report failure
           const errorData = await response.json()
           console.error("[v0] Gemini API error:", errorData)
           lastError = errorData
@@ -260,10 +258,12 @@ export async function POST(request: NextRequest) {
         }
 
         console.log(`[v0] Successfully used key ${keyIndex + 1}`)
+        await GeminiKeyService.reportSuccess(apiKey) // Report success
         successfulResponse = response
         break
       } catch (error) {
         console.error(`[v0] Error with key ${keyIndex + 1}:`, error)
+        await GeminiKeyService.reportError(apiKey) // Report failure
         lastError = error
         clearTimeout(timeoutId)
         continue
