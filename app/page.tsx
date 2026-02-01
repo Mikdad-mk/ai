@@ -81,15 +81,15 @@ export default function LandingPage() {
               "price": "0",
               "priceCurrency": "INR"
             },
-            "description": "Your intelligent Islamic scholar rooted in Ahlussunnah wal Jama'a methodology. Ask questions, analyze documents, and seek guidance based on Fathul Mueen.",
+            "description": "Your intelligent Islamic scholar rooted in Ahlussunnah wal Jama'a methodology. Developed by the Students of Islamic Da'wa Academy, Akode. Ask questions, analyze documents, and seek guidance based on Fathul Mueen.",
             "author": {
               "@type": "Organization",
-              "name": "Islamic Da'wa Academy",
+              "name": "Students of Islamic Da'wa Academy",
               "url": "https://usthad.ai"
             },
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": "5",
+              "ratingValue": "4.9",
               "ratingCount": "1250"
             }
           }),

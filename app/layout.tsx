@@ -16,13 +16,13 @@ const _notoSans = Noto_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://usthad.ai'),
   title: {
-    default: "AI Ustad - Authentic Islamic Knowledge Assistant",
+    default: "AI Ustad - The Authentic Islamic Scholar | Ahlussunnah Wal Jama'a",
     template: "%s | AI Ustad"
   },
-  description: "Your intelligent Islamic scholar rooted in Ahlussunnah wal Jama'a methodology. Ask questions, analyze documents, and seek guidance based on Fathul Mueen and authentic sources.",
-  keywords: ["Islamic AI", "Ahlussunnah wal Jama'a", "Fathul Mueen", "Shafi'i Fiqh", "Samastha", "Kerala Islam", "Islamic Scholar AI", "Fatwa AI", "Malayalam Islamic AI"],
-  authors: [{ name: "Islamic Da'wa Academy", url: "https://usthad.ai" }],
-  creator: "Islamic Da'wa Academy",
+  description: "Your intelligent Islamic scholar rooted in Ahlussunnah wal Jama'a methodology. Developed by the Students of Islamic Da'wa Academy, Akode. Ask questions based on Fathul Mueen.",
+  keywords: ["Islamic AI", "Ahlussunnah wal Jama'a", "Fathul Mueen", "Shafi'i Fiqh", "Samastha", "Kerala Islam", "Islamic Scholar AI", "Fatwa AI", "Malayalam Islamic AI", "Islamic Da'wa Academy Students", "Sunni AI"],
+  authors: [{ name: "Students of Islamic Da'wa Academy", url: "https://usthad.ai" }],
+  creator: "Students of Islamic Da'wa Academy",
   publisher: "AI Ustad",
   formatDetection: {
     email: false,
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "AI Ustad - Authentic Islamic Knowledge Assistant",
-    description: "Your intelligent Islamic scholar rooted in Ahlussunnah wal Jama'a methodology. Ask questions based on Fathul Mueen.",
+    title: "AI Ustad - The Authentic Islamic Scholar | Ahlussunnah Wal Jama'a",
+    description: "Your intelligent Islamic scholar rooted in Ahlussunnah wal Jama'a methodology. Developed by the Students of Islamic Da'wa Academy, Akode.",
     url: 'https://usthad.ai',
     siteName: 'AI Ustad',
     images: [
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "AI Ustad - Authentic Islamic Knowledge Assistant",
-    description: "Your intelligent Islamic scholar rooted in Ahlussunnah wal Jama'a methodology.",
+    title: "AI Ustad - The Authentic Islamic Scholar | Ahlussunnah Wal Jama'a",
+    description: "Your intelligent Islamic scholar rooted in Ahlussunnah wal Jama'a methodology. Developed by the Students of Islamic Da'wa Academy.",
     images: ['https://res.cloudinary.com/dqliogfsg/image/upload/v1764522883/AI_USTAD-01_fsgefv.png'],
   },
   icons: {
