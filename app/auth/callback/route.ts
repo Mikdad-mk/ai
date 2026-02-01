@@ -4,7 +4,17 @@ import { NextResponse } from "next/server"
 export async function GET(request: Request) {
   const requestUrl = new URL(request.url)
   const code = requestUrl.searchParams.get("code")
-  const origin = requestUrl.origin
+  let origin = requestUrl.origin
+
+  // Handle production environment running behind a reverse proxy (e.g., PM2/Nginx)
+  // where the request url appears as localhost but should be the public domain
+  if (
+    process.env.NODE_ENV === "production" &&
+    requestUrl.hostname === "localhost" &&
+    process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL
+  ) {
+    origin = process.env.NEXT_PUBLIC_DEV_SUPABASE_REDIRECT_URL.replace(/\/$/, "")
+  }
 
   if (code) {
     const supabase = await createClient()
