@@ -275,6 +275,169 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-24 bg-slate-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+              <p className="text-slate-600">Common questions about AI Ustad, our methodology, and features.</p>
+            </div>
+
+            <div className="space-y-4">
+              {/* FAQ Item 1 */}
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                <details className="group">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="font-semibold text-slate-900">What is AI Ustad?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                  </summary>
+                  <div className="text-slate-600 px-6 pb-6 text-sm leading-relaxed">
+                    AI Ustad is an advanced Islamic knowledge assistant designed to provide accurate religious guidance. Unlike general AI models, it is specifically trained on authentic Shafi'i texts like <strong>Fathul Mueen</strong> and strictly adheres to the ideology of <strong>Ahlussunnah wal Jama'a</strong> (Samastha Kerala Jamiyyathul Ulama).
+                  </div>
+                </details>
+              </div>
+
+              {/* FAQ Item 2 */}
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                <details className="group">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="font-semibold text-slate-900">Who developed AI Ustad?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                  </summary>
+                  <div className="text-slate-600 px-6 pb-6 text-sm leading-relaxed">
+                    AI Ustad was conceived and developed by the <strong>Students of Islamic Da'wa Academy, Akode</strong>. It is a project born out of the need for a reliable, digitally accessible source of authentic Islamic knowledge that is free from deviant interpretations.
+                  </div>
+                </details>
+              </div>
+
+              {/* FAQ Item 3 */}
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                <details className="group">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="font-semibold text-slate-900">Is the knowledge provided authentic?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                  </summary>
+                  <div className="text-slate-600 px-6 pb-6 text-sm leading-relaxed">
+                    Yes. We prioritize authenticity above all else. Our system is engineered to reference established Kitabs (books), primarily focusing on the Shafi'i Madhhab's authoritative text, <em>Fathul Mueen</em>. We explicitly filter out Salafi/Wahhabi ideologies to ensure the guidance is purely Sunni (Ahlussunnah).
+                  </div>
+                </details>
+              </div>
+
+              {/* FAQ Item 4 */}
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                <details className="group">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="font-semibold text-slate-900">Does it support multiple languages?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                  </summary>
+                  <div className="text-slate-600 px-6 pb-6 text-sm leading-relaxed">
+                    Yes! AI Ustad is multilingual. You can ask questions in Malayalam, English, Arabic, or Urdu, and it will respond in the same language. It also supports voice interactions for a seamless experience.
+                  </div>
+                </details>
+              </div>
+
+              {/* FAQ Item 5 */}
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                <details className="group">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="font-semibold text-slate-900">Is it free to use?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                  </summary>
+                  <div className="text-slate-600 px-6 pb-6 text-sm leading-relaxed">
+                    Yes, AI Ustad is currently free for public use as a service to the Ummah. You just need to create an account to start asking questions.
+                  </div>
+                </details>
+              </div>
+
+              {/* FAQ Item 6 */}
+              <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                <details className="group">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <span className="font-semibold text-slate-900">Have you showcased this project at any major events?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                  </summary>
+                  <div className="text-slate-600 px-6 pb-6 text-sm leading-relaxed">
+                    Yes, definitely! AI Ustad has been proudly introduced and performed live at various crowded prestigious events, including the <strong>SKSSF State Twalaba Conference 2025</strong> and the <strong>Samastha Global Expo</strong> (part of the Samastha International Centenary Conference 2026).
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            {/* FAQ Structured Data */}
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "What is AI Ustad?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "AI Ustad is an advanced Islamic knowledge assistant specifically trained on authentic Shafi'i texts like Fathul Mueen and adhering to the ideology of Ahlussunnah wal Jama'a (Samastha)."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Who developed AI Ustad?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "AI Ustad was developed by the Students of Islamic Da'wa Academy, Akode, to provide reliable Islamic knowledge free from deviant interpretations."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Is the knowledge provided authentic?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, AI Ustad references established Kitabs, primarily Fathul Mueen, and filters out non-Sunni ideologies to ensure authenticity according to the Shafi'i Madhhab."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Does it support multiple languages?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, AI Ustad supports Malayalam, English, Arabic, and Urdu, responding in the same language as the user's query."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Is AI Ustad free?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, AI Ustad is currently free for public use to serve the community."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Have you showcased this project at any major events?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, AI Ustad was showcased at the SKSSF State Twalaba Conference 2025 and the Samastha Global Expo (Samastha International Centenary Conference 2026)."
+                      }
+                    }
+                  ]
+                })
+              }}
+            />
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-24">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
