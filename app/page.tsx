@@ -166,7 +166,7 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent rounded-3xl" />
                 <div className="relative rounded-2xl overflow-hidden bg-slate-50 aspect-[4/3] flex items-center justify-center group">
                   {/* Abstract Representation of AI Scholar Interface */}
-                  <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-10 group-hover:scale-105 transition-transform duration-700"></div>
+                  <div className="absolute inset-0 bg-[url('/images/ponnani-makhdoom-mosque.webp')] bg-cover bg-center opacity-10 group-hover:scale-105 transition-transform duration-700"></div>
                   <div className="relative z-20 text-center p-8">
                     <div className="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-inner">
                       <Book className="w-10 h-10 text-amber-700" />
