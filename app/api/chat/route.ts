@@ -175,9 +175,10 @@ export async function POST(request: NextRequest) {
       tools: tools,
       generationConfig: {
         maxOutputTokens: 8192,
-        temperature: 0.7,
-        topP: 0.95,
-        topK: 40,
+        temperature: 0.6, // Optimized for scholarly accuracy
+        topP: 0.9,
+        topK: 35,
+        responseMimeType: "text/plain",
       },
     }
 
